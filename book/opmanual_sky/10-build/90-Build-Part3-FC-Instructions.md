@@ -128,7 +128,7 @@ On linux create a udev rule with the command:
 
     sudo touch /etc/udev/rules.d/10-flight-controller.rules
 
-Add the following line to the file:
+Add the following line to the file you just created:
 
     UBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", MODE="0664", OWNER="YOURLINUXUSERNAME"
 
