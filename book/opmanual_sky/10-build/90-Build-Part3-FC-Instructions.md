@@ -124,7 +124,17 @@ Click on "Load Firmware [Local]" in the bottom right corner of the window and se
 
 ### Connect the FC
 
-On linux create a udev rule with the command "sudo touch /etc/udev/rules.d/10-flight-controller.rules", add the following line to the file: 'UBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", MODE="0664", OWNER="YOURLINUXUSERNAME"' and activate the rule with the command "udevadm trigger"; this step is necessary to make the user own the FC otherwise Cleanflight wouldn't be able to detect it
+On linux create a udev rule with the command:
+
+    "sudo touch /etc/udev/rules.d/10-flight-controller.rules",
+
+Add the following line to the file:
+
+    'UBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", MODE="0664", OWNER="YOURLINUXUSERNAME"'
+
+Activate the rule with the command:
+
+   "udevadm trigger"
 
 With the battery **disconnected,** connect the FC to the base station via a USB to micro USB cable. Click the flash firmware button at the bottom right of the screen. Flashing will be complete once the bar at the bottom of the screen says "Programming: SUCCESSFUL".
 
